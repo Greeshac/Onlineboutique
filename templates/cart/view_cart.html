@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My Shopping Cart</title>
+</head>
+<body>
+<!-- templates/cart/view_cart.html -->
+
+<h1>Your Shopping Cart</h1>
+<ul>
+    {% for item in cart_items %}
+        <li>{{ item.product.name }} - Quantity: {{ item.quantity }} - Price: ${{ item.product.price }}</li>
+    {% endfor %}
+</ul>
+<p>Total Price: ${{ total_price }}</p>
+
+<!-- Add more HTML and formatting as needed -->
+
+
+</body>
+</html>
